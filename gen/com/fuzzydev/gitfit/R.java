@@ -20,16 +20,10 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_item_detail=0x7f030000;
-<<<<<<< HEAD
         public static final int activity_item_list=0x7f030004;
         public static final int activity_item_twopane=0x7f030001;
         public static final int fragment_item_detail=0x7f030002;
         public static final int main_list_activity=0x7f030003;
-=======
-        public static final int activity_item_list=0x7f030001;
-        public static final int activity_item_twopane=0x7f030002;
-        public static final int fragment_item_detail=0x7f030003;
->>>>>>> bdb853a0f6a84bcfd52545b5a054e3971229cce2
     }
     public static final class string {
         public static final int app_name=0x7f040000;

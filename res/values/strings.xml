@@ -2,10 +2,6 @@
 
     <string name="app_name">GitFit</string>
     <string name="title_item_detail">Item Detail</string>
-<<<<<<< HEAD
     <string name="title_item_list">GitFit</string>
-=======
-    <string name="title_item_list">Items</string>
->>>>>>> bdb853a0f6a84bcfd52545b5a054e3971229cce2
 
 </resources>
