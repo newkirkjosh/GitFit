@@ -12,11 +12,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-<<<<<<< HEAD
             android:name=".MainListActivity"
-=======
-            android:name=".ItemListActivity"
->>>>>>> bdb853a0f6a84bcfd52545b5a054e3971229cce2
             android:label="@string/title_item_list" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,11 +25,7 @@
             android:label="@string/title_item_detail" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-<<<<<<< HEAD
                 android:value=".MainListActivity" />
-=======
-                android:value=".ItemListActivity" />
->>>>>>> bdb853a0f6a84bcfd52545b5a054e3971229cce2
         </activity>
     </application>
 </manifest>
