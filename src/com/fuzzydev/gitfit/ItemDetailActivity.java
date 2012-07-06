@@ -17,12 +17,11 @@ public class ItemDetailActivity extends FragmentActivity {
 
         if (savedInstanceState == null) {
             Bundle arguments = new Bundle();
+
             ItemDetailFragment fragment = new ItemDetailFragment();
-            fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.item_detail_container, fragment)
                     .commit();
-            //
         }
     }
 
@@ -30,6 +29,7 @@ public class ItemDetailActivity extends FragmentActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             NavUtils.navigateUpTo(this, new Intent(this, MainListActivity.class));
+
             return true;
         }
 
