@@ -7,9 +7,9 @@
     android:layout_marginRight="16dp"
     android:divider="?android:attr/dividerHorizontal"
     android:showDividers="middle"
-    tools:context=".ItemListActivity">
+    tools:context=".GFMainListActivity">
 
-    <fragment android:name="com.fuzzydev.gitfit.MainListFragment"
+    <fragment android:name="com.fuzzydev.gitfit.GFMainListFragment"
         android:id="@+id/item_list"
         android:layout_width="0dp"
         android:layout_height="match_parent"
