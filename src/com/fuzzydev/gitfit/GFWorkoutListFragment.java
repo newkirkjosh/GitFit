@@ -17,7 +17,21 @@ import android.widget.ListView;
 public class GFWorkoutListFragment extends ListFragment {
 
     public static final String ARG_ITEM_ID = "item_id";
+    
     ListView workoutList;
+    private Callbacks mCallbacks = Callbacks;
+    
+    
+    public interface Callbacks {
+
+        public void onItemSelected(String id);
+    }
+    
+    private static Callbacks Callbacks = new Callbacks() {
+        @Override
+        public void onItemSelected(String id) {
+        }
+    };
     public GFWorkoutListFragment() {
     }
 
@@ -36,17 +50,23 @@ public class GFWorkoutListFragment extends ListFragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+        if (!(activity instanceof Callbacks)) {
+            throw new IllegalStateException("Activity must implement fragment's callbacks.");
+        }
+
+        mCallbacks = (Callbacks) activity;
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
+        mCallbacks = Callbacks;
     }
 
     @Override
     public void onListItemClick(ListView listView, View view, int position, long id) {
         super.onListItemClick(listView, view, position, id);
-        
+        mCallbacks.onItemSelected(String.valueOf(position));     
     }
 
 }
