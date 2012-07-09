@@ -21,6 +21,30 @@ public class Workout implements Parcelable{
 		readFromParcel(in);
 	}
 	
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		ID = iD;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ArrayList<Exercise> getExercises() {
+		return exercises;
+	}
+
+	public void setExercises(ArrayList<Exercise> exercises) {
+		this.exercises = exercises;
+	}
+
 	@Override
 	public int describeContents() {
 		return 0;

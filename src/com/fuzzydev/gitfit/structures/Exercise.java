@@ -23,6 +23,70 @@ public class Exercise implements Parcelable{
 		return 0;
 	}
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getDefSets() {
+		return defSets;
+	}
+
+	public void setDefSets(String defSets) {
+		this.defSets = defSets;
+	}
+
+	public String getDefReps() {
+		return defReps;
+	}
+
+	public void setDefReps(String defReps) {
+		this.defReps = defReps;
+	}
+
+	public String getmSets() {
+		return mSets;
+	}
+
+	public void setmSets(String mSets) {
+		this.mSets = mSets;
+	}
+
+	public String getmReps() {
+		return mReps;
+	}
+
+	public void setmReps(String mReps) {
+		this.mReps = mReps;
+	}
+
+	public String getDefTimeLimit() {
+		return defTimeLimit;
+	}
+
+	public void setDefTimeLimit(String defTimeLimit) {
+		this.defTimeLimit = defTimeLimit;
+	}
+
+	public String getmTimeLimit() {
+		return mTimeLimit;
+	}
+
+	public void setmTimeLimit(String mTimeLimit) {
+		this.mTimeLimit = mTimeLimit;
+	}
+
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeString(name);
