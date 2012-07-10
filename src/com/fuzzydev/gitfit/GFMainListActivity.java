@@ -77,24 +77,22 @@ public class GFMainListActivity extends FragmentActivity
 	
 		@Override
 		public Object instantiateItem(View collection, int position) {
-			ImageView img = new ImageView(cxt);
-			img.setBackgroundColor(Color.BLACK);
-			img.setImageResource(R.drawable.test);
-			((ViewPager) collection).addView(img,0);
+			GFNotificationView view = new GFNotificationView(cxt,R.drawable.test,"TEST MESSAGE");
+			((ViewPager) collection).addView(view,0);
 			
-			return img;
+			return view;
 		}
 	
 		@Override
 		public void destroyItem(View collection, int position, Object view) {
-			((ViewPager) collection).removeView((ImageView) view);
+			((ViewPager) collection).removeView((GFNotificationView) view);
 		}
 	
 		
 		
 		@Override
 		public boolean isViewFromObject(View view, Object object) {
-			return view==((ImageView)object);
+			return view==((GFNotificationView)object);
 		}
 		
 		@Override
