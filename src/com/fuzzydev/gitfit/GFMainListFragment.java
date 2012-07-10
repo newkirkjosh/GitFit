@@ -1,6 +1,5 @@
 package com.fuzzydev.gitfit;
 
-
 import android.R;
 import android.app.Activity;
 import android.os.Bundle;
@@ -22,8 +21,10 @@ public class GFMainListFragment extends ListFragment {
     }
 
     private static Callbacks sDummyCallbacks = new Callbacks() {
+    	
         @Override
         public void onItemSelected(String id) {
+        	
         }
     };
 

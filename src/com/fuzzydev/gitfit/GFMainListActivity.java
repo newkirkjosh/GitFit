@@ -1,43 +1,50 @@
 package com.fuzzydev.gitfit;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URL;
-
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.ArrayAdapter;
+import android.widget.SpinnerAdapter;
 
-public class GFMainListActivity extends FragmentActivity
-        implements GFMainListFragment.Callbacks {
+import com.actionbarsherlock.app.ActionBar.OnNavigationListener;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+
+public class GFMainListActivity extends SherlockFragmentActivity implements GFMainListFragment.Callbacks {
 
     private boolean mTwoPane;
 	private ViewPager viewPager;
 	private static int NUM_AWESOME_VIEWS = 5;
 	private Context cxt;
 	private ViewPageAdapter viewPageAdapter;
+	private SpinnerAdapter spinAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_list_activity);
         cxt = this;
+        
+        // This needs to change to a static list gets pulled down
+        // so that the item that is currently selected doesn't actually show up on the list
+        spinAdapter = new ArrayAdapter<String>(GFMainListActivity.this, 
+        		android.R.layout.simple_spinner_dropdown_item,
+        		new String[] { "GitFit Workouts", "My Workouts", "Progress", "Git Running" });
+        
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setNavigationMode(com.actionbarsherlock.app.ActionBar.NAVIGATION_MODE_LIST);
+        getSupportActionBar().setListNavigationCallbacks(spinAdapter, new OnNavigationListener() {
+			
+			@Override
+			public boolean onNavigationItemSelected(int itemPosition, long itemId) {
+				// Changing of fragment implementation goes here
+				return false;
+			}
+		});
         
         viewPageAdapter = new ViewPageAdapter();
         viewPager = (ViewPager) findViewById(R.id.viewPager);
@@ -49,6 +56,12 @@ public class GFMainListActivity extends FragmentActivity
                     .findFragmentById(R.id.item_list))
                     .setActivateOnItemClick(true);
         }
+    }
+    
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+    	getSupportMenuInflater().inflate(R.menu.abs_items, menu);
+    	return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
