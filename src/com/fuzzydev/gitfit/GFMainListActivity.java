@@ -1,5 +1,6 @@
 package com.fuzzydev.gitfit;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,9 +23,8 @@ public class GFMainListActivity extends SherlockFragmentActivity implements GFMa
 	private static int NUM_VIEWS = 5;
 	private Context context;
 	private ViewPageAdapter viewPageAdapter;
-	private Handler taskHandler;
 	private SpinnerAdapter spinAdapter;
-
+	private Handler taskHandler;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +34,6 @@ public class GFMainListActivity extends SherlockFragmentActivity implements GFMa
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(viewPageAdapter); 
         context = this;
-        taskHandler = new Handler();  
         
         // This needs to change to a static list gets pulled down
         // so that the item that is currently selected doesn't actually show up on the list
@@ -59,7 +58,7 @@ public class GFMainListActivity extends SherlockFragmentActivity implements GFMa
                     .findFragmentById(R.id.item_list))
                     .setActivateOnItemClick(true);
         }
-       
+        
         new Thread(new Runnable() {
             @Override
             public void run() {
