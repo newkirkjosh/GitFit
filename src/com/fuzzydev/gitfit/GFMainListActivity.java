@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.SpinnerAdapter;
@@ -30,6 +31,7 @@ public class GFMainListActivity extends SherlockFragmentActivity implements GFMa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_list_activity);
         
+        taskHandler = new Handler();
         viewPageAdapter = new ViewPageAdapter();
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(viewPageAdapter); 
@@ -98,9 +100,14 @@ public class GFMainListActivity extends SherlockFragmentActivity implements GFMa
     
     private Runnable ViewPagerTask = new Runnable() {
     	int i = 0;
+    	boolean increment = true;
         public void run() {
-        	if(i == 4)i=0;
-        	viewPager.setCurrentItem(i++,true);
+        	if(i > 3)increment = false;
+        	if(increment)
+        		viewPager.setCurrentItem(i++,true);
+        	else
+        		viewPager.setCurrentItem(i--,true);
+        	if(i == 0)increment=true;
         }
     };
 

@@ -1,6 +1,9 @@
 package com.fuzzydev.gitfit.cloud;
 
+import com.fuzzydev.gitfit.structures.User;
+
 import android.content.Context;
+import android.os.AsyncTask;
 
 /*
  *Network imports will use
@@ -44,6 +47,16 @@ public class CloudManager {
 
 	public static void setCurrentContext(Context currentContext) {
 		CloudManager.currentContext = currentContext;
+	}
+	
+	class registerUserWithCloud extends AsyncTask<User,Void,Void>{
+
+		@Override
+		protected Void doInBackground(User... params) {
+			User temp = params[0];
+			return null;
+		}
+		
 	}
 
 }
