@@ -11,6 +11,10 @@ public class User {
 	private String email;
 	private Workout mWorkouts;
 	
+	
+	public User(String firstName){
+		this.firstName = firstName;
+	}
 	public String getID() {
 		return ID;
 	}

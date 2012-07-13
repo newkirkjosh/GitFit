@@ -16,6 +16,8 @@ import android.widget.SpinnerAdapter;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.app.ActionBar.OnNavigationListener;
+import com.fuzzydev.gitfit.cloud.CloudManager;
+import com.fuzzydev.gitfit.structures.User;
 
 public class GFMainListActivity extends SherlockFragmentActivity implements GFMainListFragment.Callbacks {
 
@@ -93,6 +95,8 @@ public class GFMainListActivity extends SherlockFragmentActivity implements GFMa
                     .commit();
 
         } else {
+        	User user = new User("Dejan");
+        	CloudManager.getInstance(this).registerUser(user);
             Intent detailIntent = new Intent(this, GFWorkoutListActivity.class);
             startActivity(detailIntent);
         }
