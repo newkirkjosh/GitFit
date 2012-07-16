@@ -7,10 +7,12 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="15" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.example" >
+        android:theme="@style/Theme.example">        
         <activity
             android:name=".GFMainListActivity"
             android:label="@string/title_item_list" >
@@ -27,5 +29,5 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainListActivity" />
         </activity>
-    </application>
-</manifest>
+      </application>
+    </manifest>
