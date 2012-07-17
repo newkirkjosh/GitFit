@@ -12,6 +12,9 @@ public class User {
 	private Workout mWorkouts;
 	
 	
+	User(){//No-Arg-Constructor
+		
+	}
 	public User(String firstName){
 		this.firstName = firstName;
 	}
