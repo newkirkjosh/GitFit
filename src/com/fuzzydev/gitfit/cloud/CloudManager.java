@@ -6,6 +6,8 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.Header;
+import org.apache.http.HttpMessage;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.StatusLine;
@@ -73,7 +75,7 @@ public class CloudManager {
 			HttpConnectionParams
 					.setConnectionTimeout(client.getParams(), 50000); // Timeout
 																		// Limit
-			HttpResponse response;
+			HttpResponse response = null;
 			HttpPost post = new HttpPost(
 					"http://gitfittemp.appspot.com/gitfitserverservlet");
 			
@@ -96,6 +98,13 @@ public class CloudManager {
 				StatusLine statusLine = response.getStatusLine();
 				int statusCode = statusLine.getStatusCode();
 				Log.v("StatusCode : ", statusCode + "");
+				
+				Header[] validationHeaders = response.getHeaders("validation");
+				Header validationHeader = validationHeaders[0];
+				int validationCode = Integer.parseInt(validationHeader.getValue());
+				Log.v("ValidationCode : ", validationCode +"");
+				
+				
 				if (statusCode == 200) {
 					Log.d("DEBUG", "status code = 200");
 				} else {
