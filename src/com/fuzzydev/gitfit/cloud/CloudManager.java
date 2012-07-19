@@ -77,31 +77,29 @@ public class CloudManager {
 																		// Limit
 			HttpResponse response = null;
 			HttpPost post = new HttpPost(
-					"http://gitfittemp.appspot.com/gitfitserverservlet");
+					"http://gitfit1.appspot.com/gfregistrationservlet");
 			
 			String jsonObj = gson.toJson(temp);
-
-			Log.v("JSONDATA: ", jsonObj);
-			List<NameValuePair> postParams = new ArrayList<NameValuePair>();
-			postParams.add(new BasicNameValuePair("userData", jsonObj));
-			UrlEncodedFormEntity entity = null;
+			
 			try {
-				entity = new UrlEncodedFormEntity(postParams);
+				 StringEntity entity = new StringEntity(jsonObj);
+	             entity.setContentType("application/json;charset=UTF-8");
+                 post.setHeader("Accept", "application/json");
+	 			 post.setEntity(entity);
 			} catch (UnsupportedEncodingException e1) {
 				e1.printStackTrace();
 			}
-			entity.setContentEncoding(HTTP.UTF_8);
-			post.setEntity(entity);
-
+			
 			try {
 				response = client.execute(post);
 				StatusLine statusLine = response.getStatusLine();
 				int statusCode = statusLine.getStatusCode();
 				Log.v("StatusCode : ", statusCode + "");
 				
-				Header[] validationHeaders = response.getHeaders("validation");
-				Header validationHeader = validationHeaders[0];
-				int validationCode = Integer.parseInt(validationHeader.getValue());
+				Header[] validationHeaders = response.getHeaders("xValidation");
+				
+				Log.v("size: ", validationHeaders.length + "");
+				int validationCode = Integer.parseInt(validationHeaders[0].getValue());
 				Log.v("ValidationCode : ", validationCode +"");
 				
 				

@@ -96,6 +96,8 @@ public class GFMainListActivity extends SherlockFragmentActivity implements GFMa
 
         } else {
         	User user = new User("Dejan");
+        	user.setEmail("dejanr23@gmail.com");
+        	user.setID("DejanR23");
         	CloudManager.getInstance(this).registerUser(user);
             Intent detailIntent = new Intent(this, GFWorkoutListActivity.class);
             startActivity(detailIntent);
