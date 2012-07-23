@@ -95,7 +95,9 @@ public class GFMainListActivity extends SherlockFragmentActivity implements GFMa
                     .commit();
 
         } else {
-        	//User user = new User("Dejan");
+        	//User user = new User();
+        	//user.setPassword("testpassword");
+        	//user.setFirstName("Dejan");
         	//user.setEmail("dejanr23@gmail.com");
         	//user.setID("DejanR23");
         	//CloudManager.getInstance(this).registerUser(user);

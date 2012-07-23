@@ -77,7 +77,7 @@ public class CloudManager {
 																		// Limit
 			HttpResponse response = null;
 			HttpPost post = new HttpPost(
-					"http://gitfit1.appspot.com/gfregistrationservlet");
+					"https://gitfit1.appspot.com/gfregistrationservlet");
 			
 			String jsonObj = gson.toJson(temp);
 			

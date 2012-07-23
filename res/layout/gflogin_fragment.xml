@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+          
+    <TextView 
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:text="GitFit">
+    </TextView>
+    
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="fill_parent"
+        android:inputType="text"
+        android:background="@android:color/background_light"
+        android:layout_height="48dp"
+        android:hint="username"
+        android:layout_below="@+id/title">
+    </EditText>
+    
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:inputType="textPassword"
+        android:background="@android:color/background_light"
+        android:paddingTop="8dp"
+        android:layout_below="@+id/username"
+        android:hint="password">
+    </EditText>
+    
+    <Button
+        android:id="@+id/login"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:paddingTop="8dp"
+        android:layout_below="@+id/password"
+        android:text="Log In">
+    </Button>
+</RelativeLayout>
