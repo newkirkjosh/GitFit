@@ -36,6 +36,15 @@ public class GFLogInFragment extends Fragment{
         	
         }
     };
+    
+	public static GFLogInFragment newInstance(int someInt) {
+		GFLogInFragment myFragment = new GFLogInFragment();
+
+	    Bundle args = new Bundle();
+	    myFragment.setArguments(args);
+
+	    return myFragment;
+	}
 	
 	 public GFLogInFragment() {
 	    }
@@ -48,9 +57,15 @@ public class GFLogInFragment extends Fragment{
 	    public View onCreateView(android.view.LayoutInflater inflater, android.view.ViewGroup container, Bundle savedInstanceState) {
 		    // Inflate the layout for this fragment
 	    	
-	        myView = inflater.inflate(R.layout.gflogin_fragment, container, false);
+	        myView = inflater.inflate(R.layout.gflogin_fragment, container, false);    
+	        myView.getBackground().setDither(true); 
+	        getActivity().getWindow().setFormat(PixelFormat.RGB_565);
+	        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_DITHER);
+//	        getActivity().getWindow().getDecorView().getBackground().setDither(true);
 	        
 			login = (Button)myView.findViewById(R.id.login);
+			login.setEnabled(true);
+			login.setClickable(true);
 			login.setOnClickListener(new OnClickListener() {
 				
 				@Override
