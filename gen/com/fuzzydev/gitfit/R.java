@@ -842,12 +842,13 @@ containing a value of this type.
         public static final int abs__title=0x7f04001b;
         public static final int abs__titleDivider=0x7f04001c;
         public static final int abs__up=0x7f04000b;
-        public static final int abs_settings=0x7f04002b;
+        public static final int abs_settings=0x7f04002c;
         public static final int disableHome=0x7f040009;
-        public static final int gf_workouts=0x7f040029;
+        public static final int gf_workouts=0x7f04002a;
         public static final int homeAsUp=0x7f040006;
-        public static final int item_detail_container=0x7f040028;
-        public static final int item_list=0x7f040027;
+        public static final int item_detail=0x7f040029;
+        public static final int item_detail_container=0x7f040027;
+        public static final int item_list=0x7f040028;
         public static final int listMode=0x7f040002;
         public static final int normal=0x7f040001;
         public static final int showCustom=0x7f040008;
@@ -855,7 +856,7 @@ containing a value of this type.
         public static final int showTitle=0x7f040007;
         public static final int tabMode=0x7f040003;
         public static final int useLogo=0x7f040004;
-        public static final int viewPager=0x7f04002a;
+        public static final int viewPager=0x7f04002b;
         public static final int wrap_content=0x7f040000;
     }
     public static final class integer {
@@ -882,14 +883,16 @@ containing a value of this type.
         public static final int abs__screen_action_bar_overlay=0x7f030011;
         public static final int abs__screen_simple=0x7f030012;
         public static final int abs__screen_simple_overlay_action_mode=0x7f030013;
-        public static final int activity_item_list=0x7f03001b;
-        public static final int activity_item_twopane=0x7f030014;
-        public static final int gfworkout_list_fragment=0x7f030015;
-        public static final int gfworkout_list_layout=0x7f030016;
-        public static final int gfworkout_list_twopane=0x7f030017;
-        public static final int main_list_activity=0x7f030018;
-        public static final int sherlock_spinner_dropdown_item=0x7f030019;
-        public static final int sherlock_spinner_item=0x7f03001a;
+        public static final int activity_item_detail=0x7f030014;
+        public static final int activity_item_list=0x7f030015;
+        public static final int activity_item_twopane=0x7f030016;
+        public static final int fragment_item_detail=0x7f030017;
+        public static final int gfworkout_list_fragment=0x7f030018;
+        public static final int gfworkout_list_layout=0x7f030019;
+        public static final int gfworkout_list_twopane=0x7f03001a;
+        public static final int main_list_activity=0x7f03001b;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001c;
+        public static final int sherlock_spinner_item=0x7f03001d;
     }
     public static final class menu {
         public static final int abs_items=0x7f0b0000;
