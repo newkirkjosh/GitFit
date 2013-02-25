@@ -33,21 +33,21 @@ import android.util.Log;
 
 import com.fuzzydev.gitfit.structures.User;
 import com.google.gson.Gson;
-public class CloudManager {
+public class GFCloudManager {
 
-	private static CloudManager manager = null;
+	private static GFCloudManager manager = null;
 	private static Context currentContext;
 	HttpParams params = new BasicHttpParams();
 	InputStream in = null;
 	Gson gson = new Gson();
 
-	private CloudManager() {
+	private GFCloudManager() {
 	}
 
-	public static CloudManager getInstance(Context context) {
+	public static GFCloudManager getInstance(Context context) {
 		if (manager == null)
-			manager = new CloudManager();
-		CloudManager.setCurrentContext(context);
+			manager = new GFCloudManager();
+		GFCloudManager.setCurrentContext(context);
 		return manager;
 	}
 
@@ -56,7 +56,7 @@ public class CloudManager {
 	}
 
 	public static void setCurrentContext(Context currentContext) {
-		CloudManager.currentContext = currentContext;
+		GFCloudManager.currentContext = currentContext;
 	}
 
 	public void registerUser(User user) {
@@ -106,7 +106,7 @@ public class CloudManager {
 				if (statusCode == 200) {
 					Log.d("DEBUG", "status code = 200");
 				} else {
-					Log.e(CloudManager.class.toString(), "Failed");
+					Log.e(GFCloudManager.class.toString(), "Failed");
 				}
 			} catch (ClientProtocolException e) {
 				e.printStackTrace();

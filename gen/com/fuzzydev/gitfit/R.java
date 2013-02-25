@@ -205,7 +205,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int divider=0x7f010005;
+        public static final int dividerSherlock=0x7f010005;
         /**  Drawable to use for generic vertical dividers. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -788,29 +788,31 @@ containing a value of this type.
         public static final int abs__tab_selected_holo=0x7f020056;
         public static final int abs__tab_selected_pressed_holo=0x7f020057;
         public static final int abs__tab_unselected_pressed_holo=0x7f020058;
-        public static final int ic_action_abs_settings_icon=0x7f020059;
-        public static final int ic_launcher=0x7f02005a;
-        public static final int list_focused_example=0x7f02005b;
-        public static final int menu_dropdown_panel_example=0x7f02005c;
-        public static final int menu_hardkey_panel_example=0x7f02005d;
-        public static final int pressed_background_example=0x7f02005e;
-        public static final int progress_bg_example=0x7f02005f;
-        public static final int progress_horizontal_example=0x7f020060;
-        public static final int progress_primary_example=0x7f020061;
-        public static final int progress_secondary_example=0x7f020062;
-        public static final int selectable_background_example=0x7f020063;
-        public static final int spinner_ab_default_example=0x7f020064;
-        public static final int spinner_ab_disabled_example=0x7f020065;
-        public static final int spinner_ab_focused_example=0x7f020066;
-        public static final int spinner_ab_pressed_example=0x7f020067;
-        public static final int spinner_background_ab_example=0x7f020068;
-        public static final int tab_indicator_ab_example=0x7f020069;
-        public static final int tab_selected_example=0x7f02006a;
-        public static final int tab_selected_focused_example=0x7f02006b;
-        public static final int tab_selected_pressed_example=0x7f02006c;
-        public static final int tab_unselected_focused_example=0x7f02006d;
-        public static final int tab_unselected_pressed_example=0x7f02006e;
-        public static final int test=0x7f02006f;
+        public static final int custom_button=0x7f020059;
+        public static final int gradient_background=0x7f02005a;
+        public static final int ic_action_abs_settings_icon=0x7f02005b;
+        public static final int ic_launcher=0x7f02005c;
+        public static final int list_focused_example=0x7f02005d;
+        public static final int menu_dropdown_panel_example=0x7f02005e;
+        public static final int menu_hardkey_panel_example=0x7f02005f;
+        public static final int pressed_background_example=0x7f020060;
+        public static final int progress_bg_example=0x7f020061;
+        public static final int progress_horizontal_example=0x7f020062;
+        public static final int progress_primary_example=0x7f020063;
+        public static final int progress_secondary_example=0x7f020064;
+        public static final int selectable_background_example=0x7f020065;
+        public static final int spinner_ab_default_example=0x7f020066;
+        public static final int spinner_ab_disabled_example=0x7f020067;
+        public static final int spinner_ab_focused_example=0x7f020068;
+        public static final int spinner_ab_pressed_example=0x7f020069;
+        public static final int spinner_background_ab_example=0x7f02006a;
+        public static final int tab_indicator_ab_example=0x7f02006b;
+        public static final int tab_selected_example=0x7f02006c;
+        public static final int tab_selected_focused_example=0x7f02006d;
+        public static final int tab_selected_pressed_example=0x7f02006e;
+        public static final int tab_unselected_focused_example=0x7f02006f;
+        public static final int tab_unselected_pressed_example=0x7f020070;
+        public static final int test=0x7f020071;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f040022;
@@ -842,21 +844,26 @@ containing a value of this type.
         public static final int abs__title=0x7f04001b;
         public static final int abs__titleDivider=0x7f04001c;
         public static final int abs__up=0x7f04000b;
-        public static final int abs_settings=0x7f04002c;
+        public static final int abs_settings=0x7f040031;
+        public static final int container=0x7f04002e;
         public static final int disableHome=0x7f040009;
-        public static final int gf_workouts=0x7f04002a;
+        public static final int gf_workouts=0x7f04002f;
         public static final int homeAsUp=0x7f040006;
-        public static final int item_detail=0x7f040029;
-        public static final int item_detail_container=0x7f040027;
-        public static final int item_list=0x7f040028;
+        public static final int item_detail_container=0x7f040028;
+        public static final int item_list=0x7f040027;
         public static final int listMode=0x7f040002;
+        public static final int login=0x7f04002b;
         public static final int normal=0x7f040001;
+        public static final int password=0x7f04002a;
+        public static final int register=0x7f04002d;
+        public static final int registration=0x7f04002c;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
         public static final int tabMode=0x7f040003;
         public static final int useLogo=0x7f040004;
-        public static final int viewPager=0x7f04002b;
+        public static final int username=0x7f040029;
+        public static final int viewPager=0x7f040030;
         public static final int wrap_content=0x7f040000;
     }
     public static final class integer {
@@ -883,10 +890,11 @@ containing a value of this type.
         public static final int abs__screen_action_bar_overlay=0x7f030011;
         public static final int abs__screen_simple=0x7f030012;
         public static final int abs__screen_simple_overlay_action_mode=0x7f030013;
-        public static final int activity_item_detail=0x7f030014;
-        public static final int activity_item_list=0x7f030015;
-        public static final int activity_item_twopane=0x7f030016;
-        public static final int fragment_item_detail=0x7f030017;
+        public static final int activity_item_list=0x7f03001e;
+        public static final int activity_item_twopane=0x7f030014;
+        public static final int gflogin_fragment=0x7f030015;
+        public static final int gflogin_layout=0x7f030016;
+        public static final int gfregistration_fragment=0x7f030017;
         public static final int gfworkout_list_fragment=0x7f030018;
         public static final int gfworkout_list_layout=0x7f030019;
         public static final int gfworkout_list_twopane=0x7f03001a;
@@ -1043,7 +1051,7 @@ containing a value of this type.
            <tr><td><code>{@link #SherlockActionBar_backgroundStacked com.fuzzydev.gitfit:backgroundStacked}</code></td><td> Specifies a background drawable for a second stacked row of the action bar.</td></tr>
            <tr><td><code>{@link #SherlockActionBar_customNavigationLayout com.fuzzydev.gitfit:customNavigationLayout}</code></td><td> Specifies a layout for custom navigation.</td></tr>
            <tr><td><code>{@link #SherlockActionBar_displayOptions com.fuzzydev.gitfit:displayOptions}</code></td><td> Options affecting how the action bar is displayed.</td></tr>
-           <tr><td><code>{@link #SherlockActionBar_divider com.fuzzydev.gitfit:divider}</code></td><td> Specifies the drawable used for item dividers.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_dividerSherlock com.fuzzydev.gitfit:dividerSherlock}</code></td><td> Specifies the drawable used for item dividers.</td></tr>
            <tr><td><code>{@link #SherlockActionBar_height com.fuzzydev.gitfit:height}</code></td><td> Specifies a fixed height.</td></tr>
            <tr><td><code>{@link #SherlockActionBar_homeLayout com.fuzzydev.gitfit:homeLayout}</code></td><td> Specifies a layout to use for the "home" section of the action bar.</td></tr>
            <tr><td><code>{@link #SherlockActionBar_icon com.fuzzydev.gitfit:icon}</code></td><td> Specifies the drawable used for the application icon.</td></tr>
@@ -1064,7 +1072,7 @@ containing a value of this type.
            @see #SherlockActionBar_backgroundStacked
            @see #SherlockActionBar_customNavigationLayout
            @see #SherlockActionBar_displayOptions
-           @see #SherlockActionBar_divider
+           @see #SherlockActionBar_dividerSherlock
            @see #SherlockActionBar_height
            @see #SherlockActionBar_homeLayout
            @see #SherlockActionBar_icon
@@ -1172,9 +1180,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:divider
+          @attr name android:dividerSherlock
         */
-        public static final int SherlockActionBar_divider = 5;
+        public static final int SherlockActionBar_dividerSherlock = 5;
         /**
           <p>
           @attr description

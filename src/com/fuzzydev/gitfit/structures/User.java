@@ -3,6 +3,7 @@ package com.fuzzydev.gitfit.structures;
 public class User {
 
 	private String ID;
+	private String password;
 	private String userType;
 	private String firstName;
 	private String lastName;
@@ -12,15 +13,24 @@ public class User {
 	private Workout mWorkouts;
 	
 	
-	public User(String firstName){
-		this.firstName = firstName;
+	User(){//No-Arg-Constructor
+		
 	}
+
 	public String getID() {
 		return ID;
 	}
 	
 	public void setID(String iD) {
 		ID = iD;
+	}
+	
+	public void setPassword(String password){
+		this.password = password;
+	}
+	
+	public String getPassword(){
+		return this.password;
 	}
 	
 	public String getUserType() {

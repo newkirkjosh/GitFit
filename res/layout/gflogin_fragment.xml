@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_button">
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:hint="username"
+        android:background="@drawable/gradient_background"
+        android:inputType="text" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/username"
+        android:hint="password"
+        android:background="@drawable/gradient_background"
+        android:inputType="textPassword" >
+    </EditText>
+    
+    <Button
+        android:id="@+id/login"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_button"
+        android:gravity="center"
+        android:text="Log In" >
+    </Button>
+    
+    <TextView
+        android:id="@+id/registration"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:padding="5dp"
+        android:layout_below="@+id/login"
+        android:layout_marginTop="72dp"
+        android:layout_centerHorizontal="true"
+        android:text="Dont have an Account?">
+    </TextView>
+    
+    <Button
+        android:id="@+id/register"
+        android:layout_width="128dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/registration"
+        android:background="@drawable/custom_button"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Register" >
+    </Button>
+
+</RelativeLayout>
